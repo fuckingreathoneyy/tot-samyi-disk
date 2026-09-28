@@ -19,25 +19,23 @@
       font-size: 20px;
       color: #aaa;
     }
-    .card {
-      background: #2a2a2a;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 400px;
-      cursor: pointer;
-      transition: 0.3s;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: 50px auto;
     }
-    .card:hover {
-      background: #3a3a3a;
+    .disk {
+      display: block;
+      transition: transform 0.3s;
     }
-    .card img {
+    .disk:hover {
+      transform: scale(1.1);
+    }
+    .disk img {
       width: 100%;
-      border-radius: 8px;
-    }
-    .card h2 {
-      color: #ffcc00;
-      margin-top: 10px;
+      display: block;
     }
   </style>
 </head>
@@ -45,13 +43,20 @@
   <h1>Тот самый диск</h1>
   <p>Игры, которые мы помним. Игры, в которые мы играли.</p>
 
-  <!-- Это карточка игры. Потом мы добавим ещё -->
-  <a href="https://example.com" target="_blank" style="text-decoration: none; color: inherit;">
-    <div class="card">
-      <img src="https://via.placeholder.com/400x300?text=Кунг-фу+Панда" alt="Кунг-фу Панда">
-      <h2>Кунг-фу Панда</h2>
-    </div>
-  </a>
+  <div class="grid">
+    <a href="#" target="_blank" class="disk">
+      <img src="disk1.png" alt="Игра 1">
+    </a>
+    <a href="#" target="_blank" class="disk">
+      <img src="disk2.png" alt="Игра 2">
+    </a>
+    <a href="#" target="_blank" class="disk">
+      <img src="disk3.png" alt="Игра 3">
+    </a>
+    <a href="#" target="_blank" class="disk">
+      <img src="disk4.png" alt="Игра 4">
+    </a>
+  </div>
 
 </body>
 </html>
